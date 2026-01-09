@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.3/dragula.min.js"></script> <!-- For drag-and-drop -->
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Advanced To-Do List</h1>
+            <button id="theme-toggle">🌙 Dark Mode</button>
+        </header>
+        
+        <div class="input-section">
+            <input type="text" id="task-input" placeholder="Enter a new task...">
+            <select id="category-select">
+                <option value="work">Work</option>
+                <option value="personal">Personal</option>
+                <option value="urgent">Urgent</option>
+            </select>
+            <select id="priority-select">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <input type="date" id="due-date">
+            <button id="add-btn">Add Task</button>
+        </div>
+        
+        <div class="filters">
+            <input type="text" id="search-input" placeholder="Search tasks...">
+            <select id="filter-category">
+                <option value="all">All Categories</option>
+                <option value="work">Work</option>
+                <option value="personal">Personal</option>
+                <option value="urgent">Urgent</option>
+            </select>
+            <select id="filter-priority">
+                <option value="all">All Priorities</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <button id="export-btn">Export Tasks</button>
+            <input type="file" id="import-file" accept=".json" style="display: none;">
+            <button id="import-btn">Import Tasks</button>
+        </div>
+        
+        <div class="stats">
+            <p>Total Tasks: <span id="total-tasks">0</span></p>
+            <p>Completed: <span id="completed-tasks">0</span></p>
+            <p>Overdue: <span id="overdue-tasks">0</span></p>
+        </div>
+        
+        <ul id="task-list"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
